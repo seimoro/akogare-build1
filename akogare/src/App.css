@@ -1,0 +1,80 @@
+@import url(./reset.css);
+
+@font-face{
+    font-family: 'Zekton Rg';
+    src: url(./fonts/Zekton/zekton\ rg.ttf);
+}
+:root{
+    --accent: #feb302;
+    --dark-bg: #8b8b8b;
+    --dark-mode: #1b1b1b;
+    --light-bg: #999999;
+    --black: #0a0a0a;
+    --white: #f4f4f4;
+    --border-black: rgba(10, 10, 10, .5);
+    --border-white: rgba(184, 184, 184, .5);
+}
+
+html, body{
+    color: var(--black);
+    background-image: url(./img/bg/light-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100.5%;
+    overflow: hidden;
+    font-family: 'Zekton Rg';
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+
+
+
+
+.container{
+    padding: 0 2vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.App{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    min-height: 112.5vh;
+}
+.bg-video{
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    position: absolute;
+    margin-top: -10vh;
+    margin: -10vh auto;
+    filter: brightness(0.7);
+    overflow: hidden;
+}
+.bg-img{
+    display: none;
+}
+.header-container{
+    position: relative;
+}
+
+
+
+body.dark{
+    color: var(--white);
+    background-image: url(./img/bg/dark-bg.png);
+}
+
+body.dark .square{
+    border-color: var(--white);
+}
