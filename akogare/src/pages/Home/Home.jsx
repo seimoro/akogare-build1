@@ -1,6 +1,6 @@
 
+import MusicPlayer from "../../components/Musicplaya/playa";
 import bgVideo from "./../../img/bg/bg-video.mp4"
-import MusicPlayer from '../../components/musicPlayer/musicPlayer';
 
 
 const HomePage = () => {

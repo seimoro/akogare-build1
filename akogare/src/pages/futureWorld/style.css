@@ -2,7 +2,7 @@
     display: flex;
     font-size: .8vw;
     margin-top: 3vw;
-    margin-bottom: 2.5vw;
+    margin-bottom: 3vw;
     
     border-bottom: .1vw solid var(--border-black);
 }
@@ -45,13 +45,13 @@ body.dark .page-title{
 .main-content{
     display: flex;
     width: 100%;
-    min-height: 35vw;
+    min-height: 42vw;
 }
 
 .slider{
     width: 104.5%;
     left: -3vw;
-    height: 31.5vw;
+    max-height: 31.5vw;
 }
 .swiper-slide{
     width: 105%;

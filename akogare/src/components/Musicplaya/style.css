@@ -1,0 +1,92 @@
+.playa{
+    display: flex;
+    position: relative;
+    width: 8vw;
+    height: 3vw;
+    background: var(--black);
+    color: var(--white);
+    margin-top: 84vh;
+    border-radius: .5vw;
+    transition-duration: 500ms;
+}
+
+.playa.active{
+    width: 30vw;
+}
+.playa.active .playa-img{
+    width: 4vw;
+}
+.playa-img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3vw;
+    pointer-events: none;
+    transition-duration: 500ms;
+}
+.main-layer{
+    display: none;
+    align-items: center;
+    margin-left: 8vw;
+}
+.playa.active .main-layer{
+    font-size: 1vw;
+    display: flex;
+    width: 70%;
+}
+.playa.active .text-block{
+    display: block;
+}
+
+.text-block{
+    position: absolute;
+    right: 5vw;
+    display: none;
+    width: 50%;
+}
+.text-block h3{
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+.text-block p{
+    font-size: .9vw;
+    color: gray;
+}
+.btns{
+    position: absolute;
+    right: 1.5vw;
+    display: flex;  
+    padding: 2vw 2vw;
+}
+.btn{
+    display: flex;
+    padding: 0 .6vw;
+    align-items: center;
+}
+
+.prev, .next{
+    width: 1.8vw;
+}
+.play{
+    width: 2vw;
+}
+
+
+.setActiveBtn{
+    position: absolute;
+    top: -1vw;
+    right: -1vw;
+    background: var(--black);
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    color: var(--white);
+    font-size: 1.5vw;
+    transform: rotate(-225deg);
+    justify-content: center;
+    transition-duration: 500ms;
+    border: .1vw solid gray;
+}
+.playa.active .setActiveBtn{
+     rotate: 225deg;
+}

@@ -2,6 +2,7 @@
 
 .footer{
     margin-top: auto;
+    height: 5vw;
 }
 .footer-container{
     display: flex;
@@ -25,7 +26,7 @@
 }
 
 .footer-text-block{
-    margin-top: 2vw;
+    margin-top: 1.5vw;
 }
 .footer-text-block span{
     font-size: .5vw;

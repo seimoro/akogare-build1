@@ -13,7 +13,7 @@
 .terms-swiper{
     position: relative;
     width: 100%;
-    height: 35vw;
+    max-height: 42vw;
     align-items: center;
     justify-content: center;
     left: 0;

@@ -66,7 +66,7 @@
     position: absolute;
     inset: 0;
     width: 110%;
-    height: 102%;
+    height: 100%;
     z-index: 0;
     background-size: contain;
     rotate: 0.1deg;
@@ -88,7 +88,7 @@
 
 .about{
     position: relative;
-    padding: .6vh .45vw;
+    padding: .5vh .45vw;
     color: var(--black);
     text-align: center;
     z-index: 1;
@@ -102,8 +102,8 @@
     z-index: 1;
     content: '';
     position: absolute;
-    top: -.02vw;
-    left: -.02vw;
+    top: -.03vw;
+    left: -.03vw;
     width: 0;
     height: 0;
     border-style: solid;
