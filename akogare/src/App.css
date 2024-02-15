@@ -37,38 +37,20 @@ html, body{
     margin: 0 auto;
     box-sizing: border-box;
 }
-
+.page-title{
+    display: flex;
+    font-size: .8vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    
+    border-bottom: .1vw solid var(--border-black);
+}
 
 .App{
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
-
-/* HEADER */
-
-.header{
-    width: 100%;
-    min-height: 112.5vh;
-}
-.bg-video{
-    z-index: 0;
-    inset: 0;
-    width: 100%;
-    position: absolute;
-    margin-top: -10vh;
-    margin: -10vh auto;
-    filter: brightness(0.7);
-    overflow: hidden;
-}
-.bg-img{
-    display: none;
-}
-.header-container{
-    position: relative;
-}
-
-
 
 body.dark{
     color: var(--white);
@@ -77,4 +59,67 @@ body.dark{
 
 body.dark .square{
     border-color: var(--white);
+}
+
+@media(max-width: 650px){
+    body{
+        background-size: cover;
+        overflow-y: scroll;
+    }
+    .container{
+        padding: 0;
+    }
+    .page-title{
+        margin-top: -1.6vw;
+        align-items: center;
+        width: 100%;
+        height: 10vw;
+        position: fixed;
+        font-size: 3vw;
+        border: none;
+        z-index: 1;
+        background-image: url(./img/bg/light-bg.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: 300%;
+    }
+    body.dark .page-title{
+        
+        background-image: url(./img/bg/dark-bg.png);
+    }
+    .page-title .right-column{
+        display: none;
+    }
+    .square{
+        display: none;
+    }
+    .main-content{
+        z-index: 0;
+        margin-top: 15vw;
+        position: relative;
+        flex-direction: column;
+    }
+    
+    body::after{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        z-index: 1;
+        background: linear-gradient(rgba(0,0,0,0) 0%, var(--white) 100%);
+    }
+    /*.main-content::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 10%;
+        z-index: 1;
+        background: linear-gradient(rgba(0,0,0,0) 0%, var(--white) 100%);
+    }
+*/
+    body.dark::after, body.dark::before{
+        
+        background: linear-gradient(rgba(0,0,0,0) 0%, var(--dark-mode) 100%);
+    }
 }

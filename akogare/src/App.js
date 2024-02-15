@@ -6,6 +6,7 @@ import HomePage from './pages/Home/Home';
 import Terms from './pages/Terms/Terms';
 import AboutUs from './pages/aboutUs/AboutUs';
 import FutureWorld from './pages/futureWorld/FutureWorld';
+import Playa from './components/Musicplaya/playa';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
         <Routes>
           <Route path='/terms' element={<Terms />}/>
         </Routes>
-
+      
+        <Playa />
       </Router>
       </DarkThemeProvider>
     </div>

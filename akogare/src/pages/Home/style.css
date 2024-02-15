@@ -1,0 +1,118 @@
+.header{
+    width: 100%;
+}
+.header-container{
+    position: relative;
+}
+.homepage .center-column{
+    width: 0;
+}
+.homepage .left-column{
+    width: 38%;
+}
+.homepage .right-column{
+    width: 65%;
+}
+.homepage .right-column .square{
+    
+    border-left: 0;
+}
+.homepage .right-column .footer-text-block {
+    display: none;
+}
+.homepageimg{
+    width: 70%;
+    position: absolute;
+    right: -2.5vw;
+    bottom: -4vw;
+    z-index: 1;
+}
+
+.hometextblock{
+    font-size: 1vw;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3vw;
+    line-height: 2.5vw;
+}
+
+.hometextblock h1{
+    font-weight: 600;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 1.5vw;
+    color: var(--accent);
+}
+.hometextblock h2{
+    font-weight: 600;
+    font-size: 1.7vw;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.hometextblock p{
+    font-size: 1.5vw;
+    margin-bottom: 1.6vw;
+}
+
+.hometextblock .ask{
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+
+}
+.hometextblock span{
+    color: var(--accent);
+}
+
+@media(max-width: 650px){
+    .left-column{
+        width: 100%;
+    }
+    .homepage .left-column{
+        width: 100%;
+    }
+    .hometextblock{
+        width: 70%;
+        margin-top: 40vw;
+    }
+    .hometextblock h1{
+        font-size: 6vw;
+        margin-bottom: 6vw;
+    }
+    .hometextblock h2{
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+    .homepage p{
+        font-size: 4vw;
+        margin-bottom: 4vw;
+        line-height: 4vw;
+    }
+    .homepageimg{
+        position: relative;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+    }
+    .homepageimg img{
+        object-position: center;
+        height: 70vh;
+        width: 100%;
+        object-fit: cover; 
+        object-position: -40vw;
+    }
+    .homepageimg::before{
+        position: absolute;
+        content: '';
+        bottom: -1vw;
+        width: 100%;
+        height: 20%;
+        z-index: 2;
+        background: linear-gradient(rgba(0,0,0,0) 0%, var(--white) 100%);
+    }
+    body.dark .homepageimg::before{
+        
+        background: linear-gradient(rgba(0,0,0,0) 0%, var(--dark-mode) 100%);
+    }
+}

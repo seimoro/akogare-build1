@@ -23,10 +23,13 @@ import { useDarkTheme } from '../setDarkMode/setDarkMode'
 const NavBar = () => {
 
     const [active, setActive] = useState('')
-    const {dark, setDark, toggleDark} = useDarkTheme()
+    const {dark, toggleDark} = useDarkTheme()
     
     const navLinksRef = useRef(null)
     const darkBtnRef = useRef(null)
+    
+    const contentRef = useRef(null)
+    const otherRef = useRef(null)
     
     
 
@@ -93,14 +96,20 @@ const NavBar = () => {
                         <NavLink to='/about' className="about">ABOUT US</NavLink>
                         <NavLink to='/futureworld' className="nav-link fw">FUTURE WORLD</NavLink>
                         <Selector 
+                            ref = {contentRef}
+                            className = 'content'
                             title='CONTENT'
                             options={['NFT COLLECTION', 'EDGERUNNERS PASS', 'CUSTOMIZATION TOOL', 'MUSIC PLAYLIST']}
+                            key={0}
                         />
                         <NavLink to='/terms' className="nav-link">TERMS</NavLink>
                         
                         <Selector 
+                            ref = {otherRef}
+                            className = 'other'
                             title='OTHER'
                             options={['SUPPORT', 'MERCHANDISE', 'TEAM', 'FAQ', 'PARTNERS']}
+                            key={1}
                         />
                         
                         <a href="" className="connect"><strong>CONNECT</strong></a>

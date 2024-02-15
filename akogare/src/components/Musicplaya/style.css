@@ -1,17 +1,23 @@
 .playa{
     display: flex;
-    position: relative;
+    position: absolute;
     width: 8vw;
     height: 3vw;
-    background: var(--black);
-    color: var(--white);
-    margin-top: 84vh;
+    background: var(--light-bg);
+    color: var(--black);
+    margin-top: 85vh;
+    margin-left: 2vw;
     border-radius: .5vw;
     transition-duration: 500ms;
 }
 
+body.dark .playa, body.dark .setActiveBtn{
+    background: var(--black);
+    color: var(--white);
+}
+
 .playa.active{
-    width: 30vw;
+    width: 20vw;
 }
 .playa.active .playa-img{
     width: 4vw;
@@ -50,7 +56,11 @@
 }
 .text-block p{
     font-size: .9vw;
-    color: gray;
+    color: var(--black);
+    transition-duration: 500ms;
+}
+body.dark .text-block p{
+    color: var(--light-bg);
 }
 .btns{
     position: absolute;
@@ -76,17 +86,59 @@
     position: absolute;
     top: -1vw;
     right: -1vw;
-    background: var(--black);
+    background: var(--light-bg);
+    color: var(--black);
     border-radius: 50%;
     width: 3vw;
     height: 3vw;
-    color: var(--white);
-    font-size: 1.5vw;
-    transform: rotate(-225deg);
     justify-content: center;
     transition-duration: 500ms;
     border: .1vw solid gray;
 }
-.playa.active .setActiveBtn{
-     rotate: 225deg;
+
+
+@media(max-width: 650px){
+    .playa{
+        width: 25vw;
+        height: 15vw;
+        margin-left: 5vw;
+    }
+    .playa.active{
+        width: 70vw;
+    }
+
+    .playa-img{
+        width: 15vw;
+    }
+    .playa.active .playa-img{
+        width: 15vw;
+    }
+
+    .text-block{
+        right: 15vw;
+    }
+    .text-block h3{
+        font-size: 4vw;
+    }
+    .text-block p{
+        font-size: 3vw;
+    }
+    .setActiveBtn{   
+        top: -3vw;
+        right: -3vw; 
+        width: 8vw;
+        height: 8vw;
+    }
+    .btns{
+        padding: 0vw 3vw;
+    }
+    .btn{
+        padding: 0 2vw;
+    }
+    .prev, .next{
+        width: 7vw;
+    }
+    .play{
+        width: 8vw;
+    }
 }

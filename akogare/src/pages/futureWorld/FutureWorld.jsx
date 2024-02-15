@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Mousewheel, Pagination, Parallax } from 'swiper/modules';
 import Footer from '../../components/footer/Footer';
+import Playa from '../../components/Musicplaya/playa';
 
 const FutureWorld = () => {
 

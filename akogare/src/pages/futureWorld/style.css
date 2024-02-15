@@ -1,11 +1,4 @@
-.page-title{
-    display: flex;
-    font-size: .8vw;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    
-    border-bottom: .1vw solid var(--border-black);
-}
+
 body.dark .page-title{
     border-color: var(--border-white);
 }
@@ -45,10 +38,11 @@ body.dark .page-title{
 .main-content{
     display: flex;
     width: 100%;
-    min-height: 42vw;
+    min-height: 41vw;
 }
 
 .slider{
+    margin-top: 2vw;
     width: 104.5%;
     left: -3vw;
     max-height: 31.5vw;

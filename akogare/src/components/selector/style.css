@@ -1,5 +1,5 @@
 .select-btn{
-    padding: .5vh .2vw;
+    padding: .3vh .2vw;
     display: flex;
     align-items: center;
     transition-duration: 500ms;
@@ -41,15 +41,7 @@ body.dark .options{
     display: block;
 }
 
-.select-menu.active .select-btn{
-    background: var(--black);
-    color: var(--white);
-}
 
-body.dark .select-menu.active .select-btn{
-    background: var(--white);
-    color: var(--black);
-}
 
 .arrow{
     font-size: 0.45vw;
