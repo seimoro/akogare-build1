@@ -30,7 +30,7 @@ const HomePage = () => {
                     </div>
                     <div className="left-column">
                         <div className="hometextblock">
-                            <h1>_WELCOME TO AKOGARE</h1>
+                            <h1>WELCOME TO AKOGARE</h1>
                             <h2>THE TIME IS NOW!</h2>
                             <p>DIVE INTO A REALM WHERE <span>EAST</span> MEETS <span>WEST</span>, AND BORDERS FADE AWAY.</p>
                             <p>

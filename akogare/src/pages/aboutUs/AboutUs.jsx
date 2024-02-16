@@ -86,33 +86,33 @@ const AboutUs = () => {
                                         <img src={AboutElement.Fugazi} alt="" className="autors-img" />
                                         <div className="authors-text-block">
                                             <div className="aiden">
-                                                <h1>_AIDEN ANIMATION</h1>
+                                                <h1>AIDEN ANIMATION</h1>
                                                 <p>CREATIVE DIRECTOR, 2D/3D ARTIST & ANIMATOR</p>
                                             </div>
                                             <div className="fugazi">
-                                                <h1>_FUGAZI</h1>
+                                                <h1>FUGAZI</h1>
                                                 <p>WEB3 BUILDER, CO-FOUNDER</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="about-text-block">
-                                        <h1>_ABOUT AKOGARE</h1>
+                                        <h1>ABOUT AKOGARE</h1>
                                         <div className="inner-text-block">
                                             <h2 id="team">
-                                                _OUR TEAM
+                                                OUR TEAM
                                             </h2>
                                             <p>
                                             AT AKOGARE, OUR TEAM IS COMPOSED OF SEASONED VETERANS IN THE CRYPTOCURRENCY DOMAIN, BOASTING OVER A DECADE OF EXPERIENCE.
 OUR JOURNEY IN THE WORLD OF NFTS BEGAN IN 2018, AND BY 2021, WE WERE DEEPLY INVOLVED AS CONSULTANTS AND ADVISORS IN VARIOUS INFLUENTIAL NFT PROJECTS.
                                             </p>
                                             <h2 id="vision">
-                                                _OUR VISION
+                                                OUR VISION
                                             </h2>
                                             <p>
                                             OUR FORAY INTO CRYPTO AND NFTS WAS DRIVEN BY THE VISION TO LEVERAGE THESE PLATFORMS FOR WEALTH MULTIPLICATION. OVER THE YEARS, WE'VE OBSERVED NUMEROUS PROJECTS MISMANAGING SIGNIFICANT TREASURIES. AT AKOGARE, OUR AIM IS TO RECTIFY THESE SHORTCOMINGS AND SET NEW STANDARDS OF FISCAL RESPONSIBILITY AND INNOVATION.
                                             </p>
                                             <h2 id="mission">
-                                                _OUR MISSION
+                                                OUR MISSION
                                             </h2>
                                             <p>
                                             AKOGARE ISN'T JUST A VENTURE; IT'S A THRIVING COMMUNITY OF INDIVIDUALS UNITED BY A SHARED AMBITION. WE BELIEVE IN BUILDING WEALTH COLLECTIVELY, FOCUSING ON EXPANDING THE OVERALL VALUE RATHER THAN DIVIDING IT. OUR MODEL ENSURES THAT BOTH OUR TEAM AND STAKEHOLDERS PLAY A PIVOTAL ROLE IN FINANCIAL DECISIONS, GUARANTEEING TRANSPARENCY AND COLLABORATIVE GROWTH. WE ARE COMMITTED TO A FUTURE WHERE TREASURIES ARE OPTIMIZED AND NOT SQUANDERED, CREATING A SUSTAINABLE AND PROSPEROUS ECOSYSTEM FOR ALL INVOLVED.

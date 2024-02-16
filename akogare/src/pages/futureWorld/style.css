@@ -148,12 +148,13 @@ body.dark .swiper-pagination-bullet-active{
 }
 
 .right-text-block{
-    margin: auto 0;
+    margin: auto;
+    width: 100%;
     padding-right: 3vw;
     font-size: .9vw;
 }
 .right-text-block h1{
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     color: var(--accent);
     text-align: center;
     margin-bottom: 2vw;
@@ -162,5 +163,6 @@ body.dark .swiper-pagination-bullet-active{
 .right-text-block p{
     
     margin-bottom: 1vw;
+    line-height: 1.5vw;
 }
 
