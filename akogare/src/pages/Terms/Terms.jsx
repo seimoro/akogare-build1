@@ -99,7 +99,7 @@ const Terms = () => {
                             }}
                             modules={[Mousewheel, Scrollbar, FreeMode]}
                         >   
-                            <SwiperSlide className="terms-text">
+                            <SwiperSlide className="terms-text" style={{'maxHeight': 'fit-content'}}>
                                 <h1 className="terms-text_h1">{termsList[index].h1}</h1>
                                 {termsList[index].p.map((item) => {
                                     return <p className="terms-text_p">{item}</p>
@@ -108,6 +108,14 @@ const Terms = () => {
                                 
                             
                         </Swiper>
+                        <div className="terms-not-swiper">
+                            <div   div className="terms-text" style={{'maxHeight': 'fit-content'}}>
+                                <h1 className="terms-text_h1">{termsList[index].h1}</h1>
+                                {termsList[index].p.map((item) => {
+                                    return <p className="terms-text_p">{item}</p>
+                                })}
+                            </div>
+                        </div>
                     </div>
                     <div className="right-column">
                         <div className="swiper-scrollbar swiper-scrollbar-vertical">

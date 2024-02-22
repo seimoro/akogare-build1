@@ -24,6 +24,11 @@ import audio2 from './songs/002.wav'
 import audio3 from './songs/003.wav'
 import audio4 from './songs/004.wav'
 import audio5 from './songs/005.wav'
+import audio6 from './songs/006.wav'
+import audio7 from './songs/007.wav'
+import audio8 from './songs/008.wav'
+import audio9 from './songs/009.wav'
+import audio10 from './songs/010.wav'
 
 import { useDarkTheme } from '../setDarkMode/setDarkMode'
 import './style.css'
@@ -54,6 +59,31 @@ const Playa = () => {
             title: 'Hokkaido',
             artist: 'seimoro',
             src: audio5
+        },
+        {
+            title: 'Minazuki',
+            artist: 'seimoro',
+            src: audio6
+        },
+        {
+            title: 'Brooklyn',
+            artist: 'seimoro',
+            src: audio7
+        },
+        {
+            title: 'Street Racer',
+            artist: 'seimoro',
+            src: audio8
+        },
+        {
+            title: 'Shinkou',
+            artist: 'seimoro',
+            src: audio9
+        },
+        {
+            title: 'Yamaguchi',
+            artist: 'seimoro',
+            src: audio10
         },
     ]
 

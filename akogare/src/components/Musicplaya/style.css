@@ -98,7 +98,7 @@ body.dark .text-block{
 }
 .btn{
     display: flex;
-    padding: 0 .6vw;
+    padding: 0 .5vw;
     align-items: center;
 }
 
@@ -144,6 +144,7 @@ body.dark .text-block{
         height: 13vw;
         margin-left: 9vw;
         margin-top: 80vh;
+        border-width: .2vw;
     }
     .playa.active{
         width: 60vw;
@@ -176,6 +177,7 @@ body.dark .text-block{
         right: -3.5vw; 
         width: 8vw;
         height: 8vw;
+        border-width: .2vw;
     }
     .btns{
         padding: 0vw 2.5vw;
@@ -191,9 +193,10 @@ body.dark .text-block{
         width: 8vw;
     }
     .setActiveBtn img{
-        width: 3vw;
-        position: absolute;
-        top: 2vw;
-        right: 2.2vw;
+        width: 3.5vw;
+        margin-top: .4%;
+    }
+    .playa.active .setActiveBtn img{
+        margin-top: 0.6%;
     }
 }
