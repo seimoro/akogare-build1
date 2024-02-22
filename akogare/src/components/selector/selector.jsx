@@ -30,7 +30,7 @@ const Selector = (props) => {
         <div ref={selectRef} className={`select-menu ${props.className}`} onClick={toggleClassActive} onMouseLeave={removeClassActive}>
             <div className="select-btn">
                 <span className="sBtn-text">{props.title}</span>
-                <span className="arrow">&#11167;</span>
+                <span className="arrow">&#9660;</span>
             </div>
             <ul className="options">
                 {props.options.map((option) => {
