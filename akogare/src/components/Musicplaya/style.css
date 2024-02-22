@@ -91,7 +91,7 @@ body.dark .text-block{
 }
 .btns{
     position: absolute;
-    right: 0;
+    left: 6vw;
     display: flex;  
     padding: 2vw;
     transition-duration: 500ms;
