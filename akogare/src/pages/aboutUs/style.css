@@ -35,7 +35,7 @@
 .about-swiper{
     position: relative;
     width: 100%;
-    max-height: 41vw;
+    height: 75vh;
     align-items: center;
     justify-content: center;
     left: 0;
@@ -55,8 +55,21 @@
 body.dark .about-swiper::after{
     background: linear-gradient(rgba(0,0,0,0) 0%, var(--dark-mode) 100%);
 }
+.about-swiper::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 5%;
+    z-index: 2;
+    background: linear-gradient(var(--white) 0%, rgba(0,0,0,0) 100%);
+}
 
+body.dark .about-swiper::before{
+    background: linear-gradient(var(--dark-mode) 0%,  rgba(0,0,0,0) 100%);
+}
 .about-swiper .swiper-slide{
+    margin-top: 2.5vw;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -133,3 +146,59 @@ body.dark .about-swiper-scrollbar .swiper-scrollbar-drag{
     background: var(--white);
 }
 
+@media(max-width: 980px){
+    
+    .page-title .left-column{
+        width: 100vw;
+    }
+    
+    .about-us-main-content{
+        width: 100%;
+        margin-top: 35vw;
+        flex-direction: column;
+    }
+    .about-us-main-content .right-column{
+        display: none;
+    }
+    .about-us-page .left-column, .about-us-main-content .center-column, .about-us-page .right-column{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .about-us-list{
+        margin: auto;
+        flex-direction: row;
+        gap: 4vw;
+        margin-bottom: 6vw;
+    }
+    .about-item{
+        font-size: 4vw;
+
+    }
+    .authors-text-block{
+        margin-bottom: 8vw;
+    }
+    .authors-text-block h1{
+        font-size: 4vw;
+    }
+    .authors-text-block p{
+        font-size: 2.5vw;
+    }
+    .about-text-block{
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    .about-text-block h1{
+        font-size: 5vw;
+        margin-bottom: 8vw;
+    }
+    .about-swiper{
+        margin: auto;
+        z-index: 0;
+        width: 90%;
+        height: 125vw;
+    }
+    .inner-text-block h2{
+        font-size: 4.5vw;
+        margin: 5vw 0;
+    }
+}

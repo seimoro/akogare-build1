@@ -40,16 +40,21 @@ html, body{
 .page-title{
     display: flex;
     font-size: .8vw;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
     
     border-bottom: .1vw solid var(--border-black);
 }
-
+.page-title-text span{
+    color: var(--accent)
+}
+body.dark .page-title{
+    border-color: var(--border-white);
+}
 .App{
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
 
 body.dark{
@@ -61,7 +66,7 @@ body.dark .square{
     border-color: var(--white);
 }
 
-@media(max-width: 650px){
+@media(max-width: 980px){
     body{
         background-size: cover;
         overflow-y: scroll;
@@ -70,24 +75,26 @@ body.dark .square{
         padding: 0;
     }
     .page-title{
-        margin-top: -1.6vw;
+        top: 11.5vw;
+        padding: 6vw 14vw;
         align-items: center;
         width: 100%;
-        height: 10vw;
+        height: 2vw;
         position: fixed;
-        font-size: 3vw;
+        font-size: 5vw;
         border: none;
         z-index: 1;
-        background-image: url(./img/bg/light-bg.png);
-        background-position-y: top;
-        background-repeat: no-repeat;
-        background-size: 300%;
+        
+        background: var(--white);
     }
     body.dark .page-title{
         
-        background-image: url(./img/bg/dark-bg.png);
+        background: var(--dark-mode);
     }
-    .page-title .right-column{
+    .page-title .left-column{
+        width: 100vw;
+    }
+    .page-title .right-column, .page-title .center-column{
         display: none;
     }
     .square{
@@ -109,17 +116,22 @@ body.dark .square{
         z-index: 1;
         background: linear-gradient(rgba(0,0,0,0) 0%, var(--white) 100%);
     }
-    /*.main-content::before{
+    body::before{
         position: absolute;
         content: '';
+        top: 23vw;
         width: 100%;
-        height: 10%;
+        height: 5%;
         z-index: 1;
-        background: linear-gradient(rgba(0,0,0,0) 0%, var(--white) 100%);
+        background: linear-gradient(var(--white)  0%, rgba(0,0,0,0)  70%);
     }
-*/
-    body.dark::after, body.dark::before{
+
+    body.dark::after{
         
         background: linear-gradient(rgba(0,0,0,0) 0%, var(--dark-mode) 100%);
+    }
+    body.dark::before{
+        
+        background: linear-gradient(var(--dark-mode) 5%, rgba(0,0,0,0)  100%);
     }
 }

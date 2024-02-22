@@ -21,7 +21,7 @@
     display: none;
 }
 .homepageimg{
-    width: 70%;
+    width: 67vw;
     position: absolute;
     right: -2.5vw;
     bottom: -4vw;
@@ -65,42 +65,46 @@
     color: var(--accent);
 }
 
-@media(max-width: 650px){
+@media(max-width: 980px){
+    .homepage{
+        min-height: 170vh;
+    }
     .left-column{
         width: 100%;
     }
-    .homepage .left-column{
+    .homepage .left-column, .homepage .right-column{
         width: 100%;
     }
     .hometextblock{
-        width: 70%;
+        width: 90%;
         margin-top: 40vw;
     }
     .hometextblock h1{
-        font-size: 6vw;
-        margin-bottom: 6vw;
+        font-size: 7.5vw;
+        margin-bottom: 10vw;
     }
     .hometextblock h2{
-        font-size: 5vw;
-        margin-bottom: 5vw;
+        font-size: 6.5vw;
+        margin-bottom: 8vw;
     }
     .homepage p{
-        font-size: 4vw;
-        margin-bottom: 4vw;
-        line-height: 4vw;
+        text-align: center;
+        font-size: 5vw;
+        margin-bottom: 5vw;
+        line-height: 6vw;
     }
     .homepageimg{
+        margin-top: 5vw;
         position: relative;
-        right: 0;
         z-index: 0;
-        width: 100%;
+        width: 100vw;
+        right: 0vw;
     }
     .homepageimg img{
-        object-position: center;
         height: 70vh;
-        width: 100%;
-        object-fit: cover; 
-        object-position: -40vw;
+        width: 100vw;
+        object-fit: cover;
+        object-position: 65%;
     }
     .homepageimg::before{
         position: absolute;
@@ -115,4 +119,11 @@
         
         background: linear-gradient(rgba(0,0,0,0) 0%, var(--dark-mode) 100%);
     }
+    .homepage .right-column .footer-text-block {
+        display: flex;
+    }
+    .homepage .footer{
+        margin-top: 140vw;
+   }
+
 }

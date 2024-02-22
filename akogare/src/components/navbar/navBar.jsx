@@ -75,26 +75,32 @@ const NavBar = () => {
         })
     }
    
+    const removeActiveNav = () => {
+        if(navLinksRef.current.classList.contains('active')){
+            navLinksRef.current.classList.remove('active')
+            setActive('')
+        }
+    }
+
     
    
 
     return ( 
         <nav className="nav">
             <div className="nav-container container">
-                <NavLink to="/" className="nav-logo">
+                <NavLink to="/" className="nav-logo" onClick={removeActiveNav}>
                     
                    <img src={themeElement.logo} alt="" className="logo-img" />
                    <div className="logo-text"><span>THE BRIDGE</span> BETWEEN EAST & WEST IN <span>WEB3</span></div>
                 </NavLink>
-
-                <div className="nav-row">
+                <div ref={navLinksRef} className="nav-row">
                     <button ref={darkBtnRef} className="dark-btn" onClick={toggleDark}><img src={themeElement.darkBtn} alt="" className="dark-btn-img" /></button>
                     <Selector className="language" title='ENG' options={['ENG', '日本語']}/>
                         
-                    <div ref={navLinksRef} className="nav-links">
+                    <div  className="nav-links">
                        <img src={themeElement.tab} alt="" className="nav-links-tab" />
-                        <NavLink to='/about' className="about">ABOUT US</NavLink>
-                        <NavLink to='/futureworld' className="nav-link fw">FUTURE WORLD</NavLink>
+                        <NavLink to='/about' className="about" onClick={removeActiveNav}>ABOUT US</NavLink>
+                        <NavLink to='/futureworld' className="nav-link fw" onClick={removeActiveNav}>FUTURE WORLD</NavLink>
                         <Selector 
                             ref = {contentRef}
                             className = 'content'
@@ -102,7 +108,7 @@ const NavBar = () => {
                             options={['NFT COLLECTION', 'EDGERUNNERS PASS', 'CUSTOMIZATION TOOL', 'MUSIC PLAYLIST']}
                             key={0}
                         />
-                        <NavLink to='/terms' className="nav-link">TERMS</NavLink>
+                        <NavLink to='/terms' className="nav-link" onClick={removeActiveNav}>TERMS</NavLink>
                         
                         <Selector 
                             ref = {otherRef}
@@ -115,8 +121,8 @@ const NavBar = () => {
                         <a href="" className="connect"><strong>CONNECT</strong></a>
                     </div>
                     <div className="social-links">
-                        <a href="" target="_blank" className="social-link"><img src={themeElement.x} alt="" className="x" /></a>
-                        <a href="" target="_blank" className="social-link"><img src={themeElement.discord} alt="" className=" discord" /></a>
+                        <a href="https://twitter.com/AkogareOfficial" target="_blank" rel="noreferrer" className="social-link"><img src={themeElement.x} alt="" className="x" /></a>
+                        <a href="https://discord.gg/HZ4TTpEgXZ" target="_blank" rel="noreferrer" className="social-link"><img src={themeElement.discord} alt="" className=" discord" /></a>
                         <div className="join">
                             <img src={themeElement.joinUs} alt="" className="join-img" />
                             <span className="join-text">JOIN US!</span>

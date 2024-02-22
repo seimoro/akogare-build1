@@ -58,3 +58,34 @@ body.dark .footer-text-block a, body.dark .footer-text-block{
     color: var(--light-bg);
 }
     
+
+@media(max-width: 980px){
+   .footer{
+        margin-top: auto;
+        margin-bottom: 45vw;
+   }
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-container .left-column, .footer-container .right-column, .footer-container .center-column{
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-text-block{
+        margin-top: 8vw;
+    }
+    .footer-text-block span{
+        font-size: 3vw;
+    }
+    .barcode{
+        width: 10%;
+        height: 3vw;
+    }
+    .footer-container .right-column, .footer-container .center-column{
+        border: none;
+    }
+    .footer-container .right-column .footer-text-block{
+        text-align: center;
+        margin-top: 5vw;
+    }
+}

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import image from './img/Song mini image.png'
+import image from './img/1.png'
 
 import playSingDark from './img/dark/Play_DARK.png'
 import pauseSingDark from './img/dark/PAUSE_DARK.png'
@@ -12,6 +12,12 @@ import pauseSingLight from './img/light/PAUSE_LIGHT.png'
 
 import prevSingLight from './img/light/PREV_LIGHT.png' 
 import nextSingLight from './img/light/Next_LIGHT.png' 
+
+import soundLight from './img/light/sound_LIGHT.png'
+import soundDark from './img/dark/sound_DARK.png'
+
+import closeLight from './img/light/close_LIGHT.png'
+import closeDark from './img/dark/close_DARK.png'
 
 import audio1 from './songs/001.wav'
 import audio2 from './songs/002.wav'
@@ -60,6 +66,7 @@ const Playa = () => {
     const audioRef = useRef(null)
     const [autoPlay, setAutoPlay] = useState(false)
     const {dark} = useDarkTheme()
+    const [activeIndex, setActiveIndex] = useState(0)
 
     let music = audioRef.current
 
@@ -69,20 +76,23 @@ const Playa = () => {
                 prevSing: prevSingDark,
                 nextSing: nextSingDark,
                 pauseSing: pauseSingDark,
-                playSing: playSingDark
+                playSing: playSingDark,
+                sound: soundDark,
+                close: closeDark
             })
         }else{
             return({
                 prevSing: prevSingLight,
                 nextSing: nextSingLight,
                 pauseSing: pauseSingLight,
-                playSing: playSingLight
+                playSing: playSingLight,
+                sound: soundLight,
+                close: closeLight
             })
         }
     })
-    useEffect(() => {
-        
-    },[active])
+   
+
 
     const setActiveBtn = () => {
         setActive(currentValue => {
@@ -98,6 +108,7 @@ const Playa = () => {
     }
 
     const playSong = () => {
+        music.currentTime = 0
         if(!playBtnRef.current.classList.contains('active')){
             setIndex(0)
             music.play()
@@ -106,20 +117,20 @@ const Playa = () => {
             setIndex(1)
             music.pause()
         }
-        if(music.currentTime = songs[index].src.length){
-            setIndex(index => index + 1)
-        }
     }
     
 
     const playBtnSign = [playaThemeElement.pauseSing, playaThemeElement.playSing]
 
+    const activePlaya = [playaThemeElement.close, playaThemeElement.playSing]
 
     useEffect(() => {
         if(active){
             playaRef.current.classList.add('active')
+            setActiveIndex(index => 0)
         }else{
             playaRef.current.classList.remove('active')
+            setActiveIndex(index => 1)
         }
     }, [active])
     useEffect(() => {
@@ -147,6 +158,7 @@ const Playa = () => {
             
         }
         
+        music.currentTime = 0
     }
     const nextSong = () => {
         if(playBtnRef.current.classList.contains('active')){
@@ -166,12 +178,15 @@ const Playa = () => {
                 setAutoPlay(autoPlay => false)
             }
         }
+        
+        music.currentTime = 0
     }
 
     return ( 
         <div ref={playaRef} className="playa">
             <audio ref={audioRef} src={songs[audioIndex].src} autoPlay={autoPlay}></audio>
             <img src={image} alt="" className="playa-img" />
+            <div className="sound"><img src={playaThemeElement.sound} alt="" /></div>
             <div className="main-layer">
                 <div className="text-block">
                     <h3>{songs[audioIndex].title}</h3>
@@ -183,7 +198,7 @@ const Playa = () => {
                     <button className="next btn" onClick={nextSong}><img src={playaThemeElement.nextSing} alt="" /></button>
                 </div>
             </div>
-            <button  className="setActiveBtn" onClick={setActiveBtn}></button>
+            <button  className="setActiveBtn" onClick={setActiveBtn}><img src={activePlaya[activeIndex]} alt="" /></button>
         </div>
      );
 }

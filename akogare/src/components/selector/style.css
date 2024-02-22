@@ -1,20 +1,12 @@
 .select-btn{
-    padding: .3vh .2vw;
+    padding: .15vw .2vw;
     display: flex;
     align-items: center;
     transition-duration: 500ms;
     cursor: pointer;
 }
 
-.select-btn:hover{
-    background: var(--black);
-    color: var(--white);
-}
 
-body.dark .select-btn:hover{
-    background: var(--white);
-    color: var(--black);
-}
 
 .select-menu{
     z-index: 1;
@@ -61,12 +53,24 @@ body.dark .options{
     transition-duration: 500ms;
 }
 
-.option:hover{
-    background: var(--accent);
-}
 
-body.dark .option:hover{
-    color: var(--black);
+
+@media (hover: hover){
+    body.dark .option:hover{
+        color: var(--black);
+    }
+    .option:hover{
+        background: var(--accent);
+    }
+    .select-btn:hover{
+        background: var(--black);
+        color: var(--white);
+    }
+    
+    body.dark .select-btn:hover{
+        background: var(--white);
+        color: var(--black);
+    }
 }
 
 
@@ -81,43 +85,44 @@ body.dark .option:hover{
     margin-right: .2vw;
 }
 
-@media(max-width: 640px){
+@media(max-width: 980px){
+    
+    
+    .select-btn{
+        justify-content: center;
+    }
+    .select-menu{
+        padding: 5vw;
+        width: 100%;
+        border-bottom: .1vw solid var(--accent);
+    }
+    .options, body.dark .options{
+        position: relative;
+        background: none;
+        border-color: var(--accent);
+    }
     .option-text{
-        font-size: 2vw;
+        text-align: center;
+        font-size: 5vw;
+        padding: 4vw;
     }
-    .options{
-        margin-left: -23.2vw;
-        margin-top: -7.5vw;
+    .option-text strong{
+        display: none;
     }
-    .select-btn{
-        background: var(--light-bg);
-        color: var(--black);
+    .sBtn-text{
+        text-align: center;
+        font-size: 6vw;
     }
-    .select-btn.dark{
-        background: var(--black);
-        color: var(--white);
-    }
-    .select-menu.active .select-btn{
-        background: var(--light-bg);
-        color: var(--black);
-    }
-    .select-btn{
-        background: var(--light-bg);
-        color: var(--black);
-    }
-    .select-menu.active .select-btn.dark{
-        background: var(--black);
-        color: var(--white);
+    .option{
+        justify-content: center;
+        text-align: center;
+        font-size: 6vw;
+        border-bottom: .1vw solid var(--accent);
     }
     
-    .select-btn:hover{
-        background: var(--light-bg);
-        color: var(--black);
-
+    .arrow{
+        font-size: 4.5vw;
     }
-
-    .select-btn.dark:hover{
-        background: var(--black);
-        color: var(--white);
-    }
+    
+    
 }

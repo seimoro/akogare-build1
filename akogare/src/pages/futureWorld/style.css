@@ -1,15 +1,11 @@
 
-body.dark .page-title{
-    border-color: var(--border-white);
-}
+
 .left-column{
     display: flex;
     justify-content: space-between;
     width: 65%;
 }
-.page-title-text span{
-    color: var(--accent)
-}
+
 .square{
     height: 1vw;
     width: 0.8vw;
@@ -38,7 +34,7 @@ body.dark .page-title{
 .main-content{
     display: flex;
     width: 100%;
-    min-height: 41vw;
+    height: 75vh;
 }
 
 .slider{
@@ -127,7 +123,6 @@ body.dark .main-img::after{
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-pagination-bullet-inactive-color: transparent;
     border: .2vw solid var(--accent);
-    border-radius: 50%;
     transition-duration: 500ms;
 }
 .swiper-pagination-bullet-active{
@@ -166,3 +161,58 @@ body.dark .swiper-pagination-bullet-active{
     line-height: 1.5vw;
 }
 
+@media(max-width: 980px){
+    .main{
+        margin-top: 35vw;
+        height: 70vh;
+    }
+    .left-column, .center-column, .right-column{
+        width: 100%;
+    }
+    .slider{
+        max-height: 70vw;
+    }
+    .main-item, .main-img img{
+        height: 70vw;
+    }
+    .main-title h1{
+        font-size: 5vw;
+        font-weight: 500;
+    }
+    .main-title-text-block{
+        margin-top: 45vw;
+    }
+    .main-title-text-block p{
+        font-size: 3vw;
+        color: var(--accent);
+    }
+    
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+
+        display: flex;
+        margin: 10vw 40%;
+    }
+    .swiper-pagination-bullet{
+        --swiper-pagination-bullet-width: 3.9vw;
+        --swiper-pagination-bullet-height: 4vw;
+        border: .8vw solid var(--accent);
+        border-radius: 50%;
+        transition-duration: 500ms;
+    }
+    .right-text-block{
+        width: 90%;
+        margin-top: 20vw;
+        font-size: 4vw;
+    }
+    .right-text-block h1{
+        font-size: 5vw;
+    }
+    .right-text-block p{
+        
+        margin-bottom: 1vw;
+        line-height: 5vw;
+    }
+    .future-world .footer{
+        margin-top: 5vh;
+    }
+}
