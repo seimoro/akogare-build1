@@ -7,7 +7,7 @@
     background-size: contain;
     background-repeat: no-repeat;*/
     background: var(--light-bg);
-    border: .05vw solid var(--black);
+    border: .08vw solid var(--black);
     color: var(--black);
     margin-top: 86vh;
     margin-left: 3vw;
@@ -128,10 +128,14 @@ body.dark .text-block{
 }
 
 .setActiveBtn img{
-    width: .85vw;
-    position: absolute;
-    top: 25%;
-    right: 25%;
+
+    position: relative;
+    width: .88vw;
+    margin-left: 10%;
+}
+
+.playa.active .setActiveBtn img{
+    margin-left: 0;
 }
 
 @media(max-width: 980px){
