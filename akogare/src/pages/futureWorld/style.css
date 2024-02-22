@@ -115,7 +115,7 @@ body.dark .main-img::after{
 }
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
     
-    margin: 0 36%;
+    margin: 0 40%;
 }
 .swiper-pagination-bullet{
     --swiper-pagination-bullet-width: 0.95vw;
