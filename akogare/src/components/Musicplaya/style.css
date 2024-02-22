@@ -7,7 +7,7 @@
     background-size: contain;
     background-repeat: no-repeat;*/
     background: var(--light-bg);
-    border: .08vw solid var(--black);
+    border: .065vw solid var(--black);
     color: var(--black);
     margin-top: 86vh;
     margin-left: 3vw;
@@ -122,7 +122,7 @@ body.dark .text-block{
     height: 2vw;
     justify-content: center;
     transition-duration: 500ms;
-    border: .05vw solid var(--black);
+    border: .065vw solid var(--black);
     align-items: center;
     justify-content: center;
 }
