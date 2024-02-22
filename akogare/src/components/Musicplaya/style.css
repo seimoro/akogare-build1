@@ -74,7 +74,7 @@ body.dark .setActiveBtn, body.dark .playa{
     position: absolute;
     left: 2vw;
     display: none;
-    width: 50%;
+    width: 80%;
     color: var(--black);
 }
 body.dark .text-block{
