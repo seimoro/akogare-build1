@@ -162,8 +162,13 @@ body.dark .swiper-pagination-bullet-active{
 }
 
 @media(max-width: 980px){
+    .future-world{
+        display: flex;
+        flex-direction: column;
+    }
     .main{
-        margin-top: 35vw;
+        margin-top: 15vw;
+        margin-bottom: 10vw;
         height: 70vh;
     }
     .left-column, .center-column, .right-column{
@@ -213,6 +218,6 @@ body.dark .swiper-pagination-bullet-active{
         line-height: 5vw;
     }
     .future-world .footer{
-        margin-top: 15%;
+        margin-top: 5vh;
     }
 }
