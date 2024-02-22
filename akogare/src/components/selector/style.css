@@ -17,6 +17,7 @@
     font-size: .8vw;
 }
 .options{
+    margin-top: -.1vw;
     position: fixed;
     background: var(--light-bg);
     border: 0.1vw solid var(--black);
