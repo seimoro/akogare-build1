@@ -21,12 +21,6 @@ function App() {
         <Routes>
           <Route path='/about' element={<AboutUs />} />
         </Routes>
-        <Routes>
-          <Route path='/futureworld' element={<FutureWorld />} />  
-        </Routes>
-        <Routes>
-          <Route path='/terms' element={<Terms />}/>
-        </Routes>
       
         <Playa />
       </Router>

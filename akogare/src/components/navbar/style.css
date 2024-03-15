@@ -79,7 +79,7 @@
     text-align: center;
     z-index: 1;
     transition-duration: 500ms;
-    
+    cursor: not-allowed;
 }
 .nav-link:hover, .nav-link.active{
     background: var(--black);
@@ -137,6 +137,7 @@ body.dark .about:hover, body.dark .about.active{
     padding: .4vh .5vw;
     color: var(--black);
     z-index: 1;
+    cursor: not-allowed;
 }
 
 .social-links{

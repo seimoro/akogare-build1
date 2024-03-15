@@ -100,7 +100,7 @@ const NavBar = () => {
                     <div  className="nav-links">
                        <img src={themeElement.tab} alt="" className="nav-links-tab" />
                         <NavLink to='/about' className="about" onClick={removeActiveNav}>ABOUT US</NavLink>
-                        <NavLink to='/futureworld' className="nav-link fw" onClick={removeActiveNav}>FUTURE WORLD</NavLink>
+                        <span className="nav-link fw" onClick={removeActiveNav}>FUTURE WORLD</span>
                         <Selector 
                             ref = {contentRef}
                             className = 'content'
@@ -108,7 +108,7 @@ const NavBar = () => {
                             options={['NFT COLLECTION', 'EDGERUNNERS PASS', 'CUSTOMIZATION TOOL', 'MUSIC PLAYLIST']}
                             key={0}
                         />
-                        <NavLink to='/terms' className="nav-link" onClick={removeActiveNav}>TERMS</NavLink>
+                        <span className="nav-link" onClick={removeActiveNav}>TERMS</span>
                         
                         <Selector 
                             ref = {otherRef}

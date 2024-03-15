@@ -97,6 +97,15 @@ const Playa = () => {
     const [autoPlay, setAutoPlay] = useState(false)
     const {dark} = useDarkTheme()
     const [activeIndex, setActiveIndex] = useState(0)
+    const [intervalValue, setIntervalValue] = useState(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIntervalValue(music.currentTime)
+            
+        }, 500)
+        return () => {clearInterval(interval)}
+    })
 
     let music = audioRef.current
 
@@ -147,8 +156,14 @@ const Playa = () => {
             setIndex(1)
             music.pause()
         }
+        console.log(music.duration)
+        console.log(intervalValue)
+        if(intervalValue === music.duration){
+            nextSong()
+        }
     }
     
+   
 
     const playBtnSign = [playaThemeElement.pauseSing, playaThemeElement.playSing]
 
@@ -192,8 +207,8 @@ const Playa = () => {
     }
     const nextSong = () => {
         if(playBtnRef.current.classList.contains('active')){
-        setAutoPlay(autoPlay => true)
-        
+            setAutoPlay(autoPlay => true)
+            music.play()
         }else{
             setAutoPlay(autoPlay => false)
         }
