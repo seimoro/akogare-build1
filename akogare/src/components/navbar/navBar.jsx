@@ -118,7 +118,7 @@ const NavBar = () => {
                             key={1}
                         />
                         
-                        <a href="" className="connect"><strong>CONNECT</strong></a>
+                        <span className="connect"><strong>CONNECT</strong></span>
                     </div>
                     <div className="social-links">
                         <a href="https://twitter.com/AkogareOfficial" target="_blank" rel="noreferrer" className="social-link"><img src={themeElement.x} alt="" className="x" /></a>

@@ -19,11 +19,11 @@ html, body{
     color: var(--black);
     background-image: url(./img/bg/light-bg.png);
     background-repeat: no-repeat;
-    background-size: 100.5%;
+    background-size: cover;
     overflow: hidden;
     font-family: 'Zekton Rg';
-    width: 100vw;
-    height: 100vh;
+    width: 101vw;
+    height: 101vh;
     font-weight: 500;
 }
 
@@ -40,8 +40,8 @@ html, body{
 .page-title{
     display: flex;
     font-size: .8vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
     
     border-bottom: .1vw solid var(--border-black);
 }
@@ -68,14 +68,13 @@ body.dark .square{
 
 @media(max-width: 980px){
     body{
-        background-size: cover;
         overflow-y: scroll;
     }
     .container{
         padding: 0;
     }
     .page-title{
-        top: 11.5vw;
+        top: 2.2vh;
         padding: 6vw 14vw;
         align-items: center;
         width: 100%;

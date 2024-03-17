@@ -3,9 +3,6 @@
     position: absolute;
     width: 6vw;
     height: 2.5vw;
-    /*background-image: url(./img/light/BG_LIGHT.png);
-    background-size: contain;
-    background-repeat: no-repeat;*/
     background: var(--light-bg);
     border: .065vw solid var(--black);
     color: var(--black);
@@ -28,7 +25,6 @@
 
 
 body.dark .playa::after {
-    /*background-image: url(./img/dark/BG_DARK.png);*/
     border-color:  transparent var(--white) transparent  transparent;
 }
 body.dark .setActiveBtn, body.dark .playa{
@@ -123,12 +119,10 @@ body.dark .text-block{
     justify-content: center;
     transition-duration: 500ms;
     border: .065vw solid var(--black);
-    align-items: center;
-    justify-content: center;
 }
 
 .setActiveBtn img{
-
+    margin-top: auto;
     position: relative;
     width: .88vw;
     margin-left: 10%;
@@ -194,9 +188,8 @@ body.dark .text-block{
     }
     .setActiveBtn img{
         width: 3.5vw;
-        margin-top: .4%;
+        margin-top: 5%;
     }
     .playa.active .setActiveBtn img{
-        margin-top: 0.6%;
     }
 }
