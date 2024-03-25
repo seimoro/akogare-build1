@@ -218,4 +218,9 @@ body.dark .about-swiper-scrollbar .swiper-scrollbar-drag{
         font-size: 4.5vw;
         margin: 5vw 0;
     }
+    .partners img{
+        margin-top: 30vh;
+        margin-left: 0;
+        width: 100%;
+    }
 }
