@@ -2,6 +2,7 @@ import Footer from "../../components/footer/Footer";
 
 import FugaziLight from './assets/Fugazi_LIGHT.png'
 import FugaziDark from './assets/Fugazi_DARK.png'
+import collabs from './assets/collabs.png'
 
 import './style.css'
 
@@ -16,12 +17,32 @@ import 'swiper/css/scrollbar';
 // import required modules
 import { FreeMode, Scrollbar, Mousewheel } from 'swiper/modules';
 import { useDarkTheme } from "../../components/setDarkMode/setDarkMode";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 
 const AboutUs = () => {
 
+    const [visible, setVisible] = useState('')
     const {dark} = useDarkTheme()
+
+    const partnersRef = useRef()
+   useEffect(() => {
+        if(!visible){
+            
+            partnersRef.current.classList.remove('visible')
+        }
+        else{
+            
+            partnersRef.current.classList.add('visible')
+        }
+    }, [visible])
+
+    const showPartners = () =>{
+        setVisible('visible')
+    }
+    const closePartners = () => {
+        setVisible('')
+    }
 
     const AboutElement = useMemo(() => {
         if(dark){
@@ -59,7 +80,7 @@ const AboutUs = () => {
                                 <span className="about-item">
                                     OUR TEAM
                                 </span>
-                                <span className="about-item">
+                                <span  className="about-item" onClick={showPartners}>
                                     PARTNERS
                                 </span>
                                 <span className="about-item">
@@ -123,6 +144,7 @@ OUR JOURNEY IN THE WORLD OF NFTS BEGAN IN 2018, AND BY 2021, WE WERE DEEPLY INVO
                                     
                                 
                             </Swiper>
+                            
                         </div>
                         <div className="right-column">
                             <div className="about-swiper-scrollbar about-swiper-scrollbar-vertical">
@@ -130,6 +152,10 @@ OUR JOURNEY IN THE WORLD OF NFTS BEGAN IN 2018, AND BY 2021, WE WERE DEEPLY INVO
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div className="partners" ref={partnersRef} onClick={closePartners}>
+                    <img src={collabs} alt="" />
 
                 </div>
             </main>

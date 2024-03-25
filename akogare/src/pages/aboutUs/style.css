@@ -137,6 +137,23 @@ body.dark .about-swiper::before{
     border-radius: 0;
 }
 
+.partners{
+    position: absolute;
+    margin-top: 4.3vw;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    backdrop-filter: blur(.1vw) contrast(.7);
+    display: none;
+}
+.partners.visible{
+    display: block;
+}
+.partners img{
+    margin-top: 6vh;
+    margin-left: 15vw;
+    width: 70%;
+}
 body.dark .about-swiper-scrollbar {
     background: var(--white);
     
