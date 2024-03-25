@@ -29,8 +29,6 @@ import audio7 from './songs/007.wav'
 import audio8 from './songs/008.wav'
 import audio9 from './songs/009.wav'
 import audio10 from './songs/010.wav'
-import audio11 from './songs/011.mp3'
-import audio12 from './songs/012.mp3'
 
 import { useDarkTheme } from '../setDarkMode/setDarkMode'
 import './style.css'
@@ -40,12 +38,12 @@ const Playa = () => {
         {
             title: 'Nightmares',
             artist: 'seimoro',
-            src: audio11
+            src: audio1
         },
         {
             title: 'Osaka',
             artist: 'seimoro',
-            src: audio12
+            src: audio2
         },
         {
             title: 'Hasashi',
