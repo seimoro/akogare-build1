@@ -29,6 +29,8 @@ import audio7 from './songs/007.wav'
 import audio8 from './songs/008.wav'
 import audio9 from './songs/009.wav'
 import audio10 from './songs/010.wav'
+import audio11 from './songs/011.mp3'
+import audio12 from './songs/012.mp3'
 
 import { useDarkTheme } from '../setDarkMode/setDarkMode'
 import './style.css'
@@ -38,12 +40,12 @@ const Playa = () => {
         {
             title: 'Nightmares',
             artist: 'seimoro',
-            src: audio1
+            src: audio11
         },
         {
             title: 'Osaka',
             artist: 'seimoro',
-            src: audio2
+            src: audio12
         },
         {
             title: 'Hasashi',
@@ -84,7 +86,7 @@ const Playa = () => {
             title: 'Yamaguchi',
             artist: 'seimoro',
             src: audio10
-        },
+        }
     ]
 
     const [active, setActive] = useState('')
@@ -97,15 +99,7 @@ const Playa = () => {
     const [autoPlay, setAutoPlay] = useState(false)
     const {dark} = useDarkTheme()
     const [activeIndex, setActiveIndex] = useState(0)
-    const [intervalValue, setIntervalValue] = useState(0)
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIntervalValue(music.currentTime)
-            
-        }, 500)
-        return () => {clearInterval(interval)}
-    })
+    
 
     let music = audioRef.current
 
@@ -131,40 +125,6 @@ const Playa = () => {
         }
     })
    
-
-
-    const setActiveBtn = () => {
-        setActive(currentValue => {
-            return currentValue === 'active' ? '' : 'active'
-        })
-    }
-
-    const playBtn = () => {
-        setPlay(currentValue => {
-            return currentValue === 'active' ? '' : 'active'
-        })
-        playSong()
-    }
-
-    const playSong = () => {
-        music.currentTime = 0
-        if(!playBtnRef.current.classList.contains('active')){
-            setIndex(0)
-            music.play()
-        }
-        else{
-            setIndex(1)
-            music.pause()
-        }
-        console.log(music.duration)
-        console.log(intervalValue)
-        if(intervalValue === music.duration){
-            nextSong()
-        }
-    }
-    
-   
-
     const playBtnSign = [playaThemeElement.pauseSing, playaThemeElement.playSing]
 
     const activePlaya = [playaThemeElement.close, playaThemeElement.playSing]
@@ -188,13 +148,41 @@ const Playa = () => {
         }
     }, [play])
 
+
+    const setActiveBtn = () => {
+        setActive(currentValue => {
+            return currentValue === 'active' ? '' : 'active'
+        })
+    }
+
+    const playBtn = () => {
+        setPlay(currentValue => {
+            return currentValue === 'active' ? '' : 'active'
+        })
+        playSong()
+    }
+
+    const playSong = () => {
+        if(!playBtnRef.current.classList.contains('active')){
+            setIndex(0)
+            music.play()
+            if(music.currentTime === music.duration){
+                nextSong()
+            }
+        }
+        else{
+            setIndex(1)
+            music.pause()
+        }
+        
+    }
     
     const prevSong = () => {
+        music.currentTime = 0
         if(playBtnRef.current.classList.contains('active')){
-            setAutoPlay(autoPlay => true)
-            
+            setAutoPlay(true)
         }else{
-            setAutoPlay(autoPlay => false)
+            setAutoPlay(false)
         }
         if(!audioIndex){
             setAudioIndex(songs.length - 1)
@@ -203,33 +191,31 @@ const Playa = () => {
             
         }
         
-        music.currentTime = 0
     }
     const nextSong = () => {
+        music.currentTime = 0
         if(playBtnRef.current.classList.contains('active')){
-            setAutoPlay(autoPlay => true)
-            music.play()
+            setAutoPlay(true)
         }else{
-            setAutoPlay(autoPlay => false)
+            setAutoPlay(false)
         }
         if(audioIndex === songs.length - 1){
             setAudioIndex(0)
         } else{
             setAudioIndex((index) => index + 1)
             if(playBtnRef.current.classList.contains('active')){
-                setAutoPlay(autoPlay => true)
+                setAutoPlay(true)
                 
             }else{
-                setAutoPlay(autoPlay => false)
+                setAutoPlay(false)
             }
         }
         
-        music.currentTime = 0
     }
 
     return ( 
         <div ref={playaRef} className="playa">
-            <audio ref={audioRef} src={songs[audioIndex].src} autoPlay={autoPlay}></audio>
+            <audio ref={audioRef} src={songs[audioIndex].src} autoPlay={autoPlay} onEnded={nextSong}></audio>
             <img src={image} alt="" className="playa-img" />
             <div className="sound"><img src={playaThemeElement.sound} alt="" /></div>
             <div className="main-layer">
